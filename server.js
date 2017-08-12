@@ -2,6 +2,8 @@ const express = require('express');
 const hbs = require('hbs');
 const fs = require('fs');
 
+
+const port = process.env.PORT || 3000;
 const app = express();
 
 // Подключение папки с повторяющимися частями html-страниц (такими как footer)
@@ -54,6 +56,6 @@ app.get('/about', (req, res) => {
   });
 });
 
-app.listen(3000, () => {
-  console.log(`Server is up on port on 3000...`);
+app.listen(port, () => {
+  console.log(`Server is up on port on ${port}...`);
 });
